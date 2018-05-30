@@ -23,3 +23,7 @@ Things you may want to cover:
 
 * ...
 # Beer-Surfer
+
+## Login Information:
+Email: sam@gmail.com, Password: 123456
+Email: byron@gmail.com, Password: 456789
