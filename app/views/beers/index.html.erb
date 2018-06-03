@@ -1,0 +1,50 @@
+<h1>Beer#index</h1>
+<p>Find me in app/views/beer/index.html.erb</p>
+<script src="https://api.punkapi.com/v2/beers"></script>
+
+<% p "****************" %>
+<% p @response %>
+
+
+
+<h1>Beers</h1>
+<div class="flex-container">
+   
+        <% @beers.each do |beer| %>
+        <td><%= beer.name %></td>
+        <td><%= beer.tagline %></td>
+        <td><%= beer.image_url %></td>
+        <td><%= beer.description %></td>
+        <td><%= beer.ABV %> </td>      
+        <td><%= beer.food_pairing %></td>
+        <% end %>
+
+</div>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Tagline</th>
+        <th>Description</th>
+        <th>ABV</th>
+        <th>Food Pairings</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <% @beers.each do |beer| %>
+        <td><%= beer.name %></td>
+        <td><%= beer.tagline %></td>
+        <td><%= beer.image_url %></td>
+        <td><%= beer.image_url %></td>
+        <%# <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+        <td>john@example.com</td> %>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+</div>

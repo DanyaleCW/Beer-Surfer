@@ -1,0 +1,46 @@
+<h1>Profile#index</h1>
+<p>Find me in app/views/profile/index.html.erb</p>
+
+  <title>dislike Surfer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="container text-center">
+  <h3>Firstname Lastname</h3>
+  <%= image_tag("male", alt: "male", class: "male") %>
+ 
+  <p>I love dislike!</p>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p><strong>Likes</strong></p><br>
+        <% @likes.each do |like| %>
+              <p>Name: <%= like.name %></p>
+              <p>Tagline: <%= like.tagline %></p>
+              <p>Image: <%= like.image_url %></p>
+              <p>Description: <%= like.description %></p>
+              <p>ABV: <%= like.ABV %> </p>      
+              <p>Food Pairings: <%= like.food_pairing %></p>
+              <% end %>
+    </div>
+
+    <div class="col-sm-4">
+      <p><strong>Want to Try</strong></p><br>
+        <% @wants.each do |want| %>
+            <p>Name: <%= want.name %></p>
+            <p>Tagline: <%= want.tagline %></p>
+            <p>Image: <%= want.image_url %></p>
+            <p>Description: <%= want.description %></p>
+            <p>ABV: <%= want.ABV %> </p>      
+            <p>Food Pairings: <%= want.food_pairing %></p>
+            <% end %> 
+    </div>
+
+    <div class="col-sm-4">
+      <p><strong>Dislikes</strong></p><br>
+        <% @dislikes.each do |dislike| %>
+          <p>Name: <%= dislike.name %></p>
+          <% end %>
+    </div>
+</div>
+
+
