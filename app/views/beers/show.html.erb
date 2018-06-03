@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Tagline</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @beers.each do |beer| %>
+    <tr>
+      <th><%= beer["name"] %></th>
+      <th><%= beer["tagline"] %></th>
+      <th><%= beer["description"] %></th>
+      
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
