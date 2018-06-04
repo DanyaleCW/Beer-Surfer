@@ -1,7 +1,8 @@
 class Beer < ApplicationRecord
-    validates_uniqueness_of :name
-    validates_presence_of :name, :abv, :ibu, :ebc
-    require 'httparty'
+    include HTTParty
+    # validates_uniqueness_of :name
+    # validates_presence_of :name, :abv, :ibu, :ebc
+    
 
     has_many :likes
     has_many :wants
@@ -11,9 +12,9 @@ class Beer < ApplicationRecord
     has_many :users, through: :wants
 
 
-     
-    @response = HTTParty.get('https://api.punkapi.com/v2/beers')
-    puts @response.body
+    #  get
+    # @response = HTTParty.get('https://api.punkapi.com/v2/beers')
+    # puts @response.body
 
    
 

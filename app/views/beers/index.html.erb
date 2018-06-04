@@ -4,18 +4,19 @@
 
 <% p "****************" %>
 <% p @response %>
+<% p @myRequest %>
 
 
 
 <h1>Beers</h1>
-<div class="flex-container">
+<div class="flex-container" id="beer">
    
         <% @beers.each do |beer| %>
         <td><%= beer.name %></td>
         <td><%= beer.tagline %></td>
         <td><%= beer.image_url %></td>
         <td><%= beer.description %></td>
-        <td><%= beer.ABV %> </td>      
+              
         <td><%= beer.food_pairing %></td>
         <% end %>
 
@@ -38,7 +39,6 @@
         <td><%= beer.name %></td>
         <td><%= beer.tagline %></td>
         <td><%= beer.image_url %></td>
-        <td><%= beer.image_url %></td>
         <%# <td>John</td>
         <td>Doe</td>
         <td>john@example.com</td>
@@ -48,3 +48,11 @@
     </tbody>
   </table>
 </div>
+
+<div id="beer"></div>
+
+<%= link_to 'Beer', beer_path(@beers.ids) %>
+
+
+
+<%# <div id="beer' + i + '">' + v.name + '<br><img height="200" onclick="show(myRequest.response[' + i + '],' + i + ')" src="' + v.image_url + '"><br></div> %>
