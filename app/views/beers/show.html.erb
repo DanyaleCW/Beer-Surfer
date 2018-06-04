@@ -1,6 +1,6 @@
+<%= image_tag(@beer_punk[0]["image_url"]) %>
 <h1>Name: <%= @beer_punk[0]["name"] %></h1>
 <h1>Tagline: <%= @beer_punk[0]["tagline"] %></h1>
- <%= image_tag(@beer_punk[0]["image_url"]) %>
 <h1>ABV: <%= @beer_punk[0]["ABV"] %></h1>
 <h1>Description: <%= @beer_punk[0]["description"] %></h1>
 <h1>Food Pairings: <%= @beer_punk[0]["food_pairing"][0] %></h1>
@@ -8,4 +8,17 @@
 <h1><%= @beer_punk[0]["food_pairing"][2] %></h1>
 <h1><%= @beer_punk[0]["food_pairing"][3] %></h1>
 <h1>Brewers Tips<%= @beer_punk[0]["brewers_tips"] %></h1>
+      
+        <a href="#" class="btn btn-info btn-lg">
+          <span class="thumbs-up"></span> Like
+        </a>
+    
+      
+        <a href="#" class="btn btn-info btn-lg">
+          <span class="thumbs-down"></span> Dislike
+        </a>
+
+        <a href="#" class="btn btn-info btn-lg">
+          <span class="wants"></span> Want to Try
+        </a>
 
