@@ -9,49 +9,12 @@
 
 
 <h1>Beers</h1>
-<div class="flex-container" id="beer">
-   
-        <% @beers.each do |beer| %>
-        <td><%= beer.name %></td>
-        <td><%= beer.tagline %></td>
-        <td><%= beer.image_url %></td>
-        <td><%= beer.description %></td>
-              
-        <td><%= beer.food_pairing %></td>
-        <% end %>
 
-</div>
-
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Tagline</th>
-        <th>Description</th>
-        <th>ABV</th>
-        <th>Food Pairings</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <% @beers.each do |beer| %>
-        <td><%= beer.name %></td>
-        <td><%= beer.tagline %></td>
-        <td><%= beer.image_url %></td>
-        <%# <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td> %>
-        <% end %>
-      </tr>
-    </tbody>
-  </table>
-</div>
+  
 
 <div id="beer"></div>
 
-<%= link_to 'Beer', beer_path(@beers.ids) %>
+
 
 
 

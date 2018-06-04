@@ -1,22 +1,11 @@
-<p id="notice"><%= notice %></p>
-<table class="table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Tagline</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @beers.each do |beer| %>
-    <tr>
-      <th><%= beer["name"] %></th>
-      <th><%= beer["tagline"] %></th>
-      <th><%= beer["description"] %></th>
-      
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+<h1>Name: <%= @beer_punk[0]["name"] %></h1>
+<h1>Tagline: <%= @beer_punk[0]["tagline"] %></h1>
+ <%= image_tag(@beer_punk[0]["image_url"]) %>
+<h1>ABV: <%= @beer_punk[0]["ABV"] %></h1>
+<h1>Description: <%= @beer_punk[0]["description"] %></h1>
+<h1>Food Pairings: <%= @beer_punk[0]["food_pairing"][0] %></h1>
+<h1><%= @beer_punk[0]["food_pairing"][1] %></h1>
+<h1><%= @beer_punk[0]["food_pairing"][2] %></h1>
+<h1><%= @beer_punk[0]["food_pairing"][3] %></h1>
+<h1>Brewers Tips<%= @beer_punk[0]["brewers_tips"] %></h1>
 
-<%= link_to 'Beer', beer_path(@beers.id) %>
