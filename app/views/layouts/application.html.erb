@@ -15,12 +15,14 @@
 
   <h1>Beer Surfer - Application.html.erb<h1>
   <nav class="navbar">
-  <a class="navbar-brand">Home</a>
-  <a class="navbar-brand">Profile</a>
-  <form class="form-inline">
+  <a href="welcome"class="navbar-brand">Home</a>
+  <a href="profile"class="navbar-brand">Profile</a>
+  <a href="/users/sign_up"class="navbar-brand">Sign-up</a>
+  <a href="/users/sign_in"class="navbar-brand">Log-in</a>
+  <%# <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="Beers" aria-label="Search">
     <button class="btn" type="submit">Search</button>
-  </form>
+  </form> %>
 </nav>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
