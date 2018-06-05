@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'profile/index'
+  # get 'profile/index'
   get 'users/index'
   get 'likes/index'
   get 'dislikes/index'
@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   #  resources :home
    resources :beers
    resources :profiles
+   resources :users
 end

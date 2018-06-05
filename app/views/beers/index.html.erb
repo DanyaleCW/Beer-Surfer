@@ -1,17 +1,38 @@
 <h1>Beer#index</h1>
 <p>Find me in app/views/beer/index.html.erb</p>
-<script src="https://api.punkapi.com/v2/beers"></script>
+<%# <script src="https://api.punkapi.com/v2/beers"></script> %>
 
-<% p "****************" %>
-<% p @response %>
-<% p @myRequest %>
-
-<render _>
+<% p "3****************3" %>
 
 <h1>Beers</h1>
+<%# <% @beers.each do |beer_p| %> %>
 
-  
+<h1>Name: <%= @beer_p[0]["name"] %></h1>
+<h1>Tagline: <%= @beer_p[0]["tagline"] %></h1>
+<%= image_tag(@beer_p[0]["image_url"]) %>
+<h1>ABV: <%= @beer_p[0]["ABV"] %></h1>
+<h1>Description: <%= @beer_p[0]["description"] %></h1>
+<h1>Food Pairings: <%= @beer_p[0]["food_pairing"][0] %></h1>
+<h1><%= @beer_p[0]["food_pairing"][1] %></h1>
+<h1><%= @beer_p[0]["food_pairing"][2] %></h1>
+<h1><%= @beer_p[0]["food_pairing"][3] %></h1>
+<h1>Brewers Tips: <%= @beer_p[0]["brewers_tips"] %></h1>
+<% p "30****************30" %>
+      
+        <a href="/beers/:id" class="btn btn-info btn-lg">
+          <span class="thumbs-up"></span> Like
+        </a>
+    
+      
+        <a href="#" class="btn btn-info btn-lg">
+          <span class="thumbs-down"></span> Dislike
+        </a>
 
-<div id="beer"></div>
+        <a href="#" class="btn btn-info btn-lg">
+          <span class="wants"></span> Want to Try
+        </a>
+        <%# <% end %> %>
+
+
 
 
